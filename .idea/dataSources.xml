@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="auction" uuid="f9ca2226-f406-4a7f-bf38-5ad973a39903">
+    <data-source source="LOCAL" name="feedback" uuid="5a184d68-9c7f-4684-8fba-4f9ebfd31959">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:C:\Users\liman\PycharmProjects\feedback\auction.db</jdbc-url>
+      <jdbc-url>jdbc:sqlite:C:\Users\liman\PycharmProjects\feedback\feedback.db</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
       <libraries>
         <library>

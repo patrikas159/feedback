@@ -6,6 +6,6 @@ from .category import categories
 
 class FeedbackForm(FlaskForm):
 
-    name = StringField("Pavadinimas:",validators=[InputRequired()])
+    name = StringField("Title:",validators=[InputRequired()])
     category = SelectField('Category', choices=categories.values())
     description = TextAreaField("Description", validators=[InputRequired()])

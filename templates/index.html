@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Website something</title>
+</head>
+<body>
+{% include 'base.html' %}
+{{ user }}
+<div class="container">
+    <div class="row">
+    {% for feed in feedback %}
+    {{ feed }}
+    {% endfor %}
+        {% for feedback in feedback %}
+            <a href="{{ url_for('feedback', feedback_id=feedback.id) }}">
+                <ul class="collection">
+                    <div class="collection-item col s12 m6">
+                        <i class="material-icons prefix"></i>
+                        Title : {{ feedback.name }}
+
+                    </div>
+                    <div class="collection-item col s12 m6">
+                        <i class="material-icons prefix"></i>
+                        Category : {{ feedback.category }}
+
+                    </div>
+
+                    <div class="collection-item col s12 m6">
+                        <i class="material-icons prefix"></i>
+                        Description : {{ feedback.description }}
+
+                    </div>
+
+                    <div class="collection-item col s12 m6">
+                        <i class="material-icons prefix"></i>
+                        Views : {{ feedback.views }}
+
+                    </div>
+
+                </ul>
+            </a>
+        {% endfor %}
+
+    </div>
+</div>
+
+</body>
+</html>

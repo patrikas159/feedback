@@ -1,13 +1,22 @@
-from flask import redirect,url_for
-from flask.views import MethodView
+
 from forms.feedback_form import FeedbackForm
-from models import db
 from models.feedback import Feedback
+from flask import redirect,url_for,render_template, session
+from flask.views import MethodView
+from models import db
 
 
 
 
 class CreateFeedback(MethodView):
+
+    def get(self):
+        feedback_form = FeedbackForm()
+
+        if session.get('username') is None:
+            return redirect(url_for('login'))
+
+        return render_template('createFeedback.html', feedback_form=feedback_form)
 
     def post(self):
         feedback_form = FeedbackForm()
