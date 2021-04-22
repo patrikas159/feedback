@@ -2,7 +2,7 @@
     <div class="nav-wrapper">
         <ul>
             <li><a href="{{ url_for("create_feedback") }}">Create Feedback</a></li>
-            <li><a href="{{ url_for("index") }}">List Feedback</a></li>
+            <li><a href="{{ url_for("index") }}">Feedback List</a></li>
             {% if session['username'] %}
             <li><a href="{{ url_for("logout") }}">Logout</a></li>
             {% else %}

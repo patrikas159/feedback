@@ -9,9 +9,6 @@
 {{ user }}
 <div class="container">
     <div class="row">
-    {% for feed in feedback %}
-    {{ feed }}
-    {% endfor %}
         {% for feedback in feedback %}
             <a href="{{ url_for('feedback', feedback_id=feedback.id) }}">
                 <ul class="collection">
