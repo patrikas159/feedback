@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+{% include 'base.html' %}
 <head>
     <link rel="stylesheet" type="text/css" href="static/style.css">
     <meta charset="UTF-8">
@@ -7,26 +8,44 @@
 </head>
 <body>
 <form method="POST">
+<div class="container">
+    <div class="row">
+
+
     {{ registration_form.csrf_token }}
 
-            <div class="">
-                <i class="">email</i>
+            <div class="email">
+                <div class="input-field col s12 m8">
+                <i class="material-icons prefix"></i>
                 {{ registration_form.email(class_="validate") }}
                 {{ registration_form.email.label }}
+                </div>
             </div>
-            <div class="">
-                <i class="">username</i>
+            <div class="username">
+                <div class="input-field col s12 m8">
+                <i class="material-icons prefix"></i>
                 {{ registration_form.username(class_="validate") }}
                 {{ registration_form.username.label }}
+                </div>
             </div>
-            <div class="">
-                <i class="">password</i>
+            <div class="password">
+                <div class="input-field col s12 m8">
+                <i class="material-icons prefix"></i>
                 {{ registration_form.password(class_="validate") }}
                 {{ registration_form.password.label }}
+                </div>
             </div>
-    <button type="submit" class="button button2">Register</button>
 
-</form>
 
+
+
+    </div>
+</div>
+<div style="margin-left:700px">
+                <button class="btn waves-effect waves-light" type="submit" name="action">Register
+                <i class="material-icons right"></i>
+                </button>
+            </div>
+    </form>
 </body>
 </html>

@@ -1,6 +1,6 @@
 
 from models.feedback import Feedback
-from flask import redirect, url_for, render_template, session, flash, request
+from flask import redirect, url_for, render_template, session
 from flask.views import MethodView
 from models import db
 from models.user import User
@@ -14,7 +14,6 @@ class FeedbackDetails(MethodView):
         if feedback is None:
             return redirect(url_for('index'))
 
-        feedback.views += 1
         db.session.commit()
 
         user = User.query.filter_by(id=feedback.id).first()

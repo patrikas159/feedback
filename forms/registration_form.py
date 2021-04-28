@@ -5,6 +5,6 @@ from wtforms.fields.html5 import EmailField
 
 
 class RegisterForm(FlaskForm):
-    email = EmailField("Please input your email", validators=[DataRequired(), Email()])
-    username = StringField("Please input your username", validators=[DataRequired()])
-    password = PasswordField("input password", validators=[DataRequired()])
+    email = EmailField("Email", validators=[DataRequired(), Email()])
+    username = StringField("Username", validators=[DataRequired()])
+    password = PasswordField("Password", validators=[DataRequired()])

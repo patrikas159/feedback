@@ -1,1 +1,1 @@
-categories = {"Imone":"Imone", "Preke":"Preke"}
+categories = {"Company":"Company", "Product":"Product"}

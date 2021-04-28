@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Feedback</title>
 </head>
 <body>
 {% include 'base.html' %}
@@ -10,20 +10,22 @@
 <div class="container">
     <div class="row">
         <div class="col s12 m8">
-            <div class="card">
+            <div class="card" style="margin-top: 100px; margin-right: -100px; margin-left: 180px">
                 <div class="title col s12 m8">
-                    <span class="card-title">{{ feedback.name.label }}</span>
+                    <span class="card-title" style="margin-left: 50px">Tittle: {{ feedback.name }}</span>
                 </div>
+                <div class="content ">
+                 <p>Description: {{ feedback.description }}</p>
             </div>
-            <div class="card-content">
+                <div class="card-action">
+                    <a href="#">Rating: <b style="color: #0D47A1">{{ feedback.ivertinimas }}</b></a>
+                    <a href="#"> CODE OF {{ feedback.category }}: <b style="color: #00b0ff">{{ feedback.kodas}}</b></a>
+                    <a href="#">Category: <b style="color: #00b0ff">{{ feedback.category}}</b></a>
+                    <a href="#">Author: <b style="color: #00b0ff">{{ user.username }}</b></a>
+            </div>
+            </div>
 
-                <p>{{ feedback.description }}</p>
-            </div>
-            <div class="card-action">
-                <a href="#">Number: <b style="color: #0D47A1">{{ feedback.id }}</b></a>
-                <a href="#">Views: <b style="color: #00acc1">{{ feedback.views }}</b></a>
-                <a href="#">Username: <b style="color: #00b0ff">{{ user.first_name }}</b></a>
-            </div>
+
         </div>
     </div>
 </div>
